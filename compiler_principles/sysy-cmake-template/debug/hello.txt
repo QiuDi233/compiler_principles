@@ -1,0 +1,19 @@
+	.text
+	.globl getint
+getint:
+	.globl getch
+getch:
+	.globl getarray
+getarray:
+	.globl putint
+putint:
+	.globl putch
+putch:
+	.globl putarray
+putarray:
+	.globl starttime
+starttime:
+	.globl stoptime
+stoptime:
+	.globl main
+main:

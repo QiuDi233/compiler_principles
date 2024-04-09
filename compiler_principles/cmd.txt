@@ -1,0 +1,25 @@
+gitlab
+pku2000012852
+FtMY7AGJ
+
+提交代码
+git add .
+git commit -m ""
+git push -uf origin main
+
+
+启动
+docker run -it --rm -v/Users/qiudi/Desktop/compiler_principles/sysy-cmake-template:/root/sysy-cmake-template maxxing/compiler-dev bash
+
+cd sysy-make-template
+cmake -DCMAKE_BUILD_TYPE=Debug -B build
+cmake --build build
+
+build/compiler -koopa debug/hello.c -o debug/hello.koopa
+build/compiler -riscv debug/hello.c -o debug/hello.txt
+
+
+测试
+docker run -it --rm -v /Users/qiudi/Desktop/compiler_principles/sysy-cmake-template:/root/compiler maxxing/compiler-dev autotest -koopa -s lv1 /root/compiler
+
+docker run -it --rm -v /Users/qiudi/Desktop/compiler_principles/sysy-cmake-template:/root/compiler maxxing/compiler-dev autotest -riscv -s lv1 /root/compiler
